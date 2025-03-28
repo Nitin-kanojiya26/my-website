@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Subscription</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            background-image: url("music1.jpg");
+            background-size: cover;
+            color: #333;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            background-image: url("sidebar.jpg");
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px; /* Set a max width for larger screens */
+            margin: auto;
+            overflow: hidden;
+        }
+
+        h1 {
+            float: left;
+            font-size: 2.5rem; /* Responsive font size */
+        }
+
+        nav {
+            float: right;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-left: 1rem; /* Responsive margin */
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .subscription {
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .subscription h2 {
+            margin-bottom: 1.5rem;
+            color: #fff;
+            font-size: 2.5rem; /* Responsive font size */
+        }
+
+        .subscription-plans {
+            display: flex;
+            justify-content: center;
+            gap: 1rem; /* Responsive gap */
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+        }
+
+        .plan {
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(172, 40, 40, 0.1);
+            padding: 1.5rem; /* Responsive padding */
+            width: 100%; /* Full width on small screens */
+            max-width: 300px; /* Set a max width */
+            flex: 1 1 300px; /* Allow plans to grow and shrink */
+            transition: transform 0.3s; /* Add transition for hover effect */
+        }
+
+        .plan:hover {
+            transform: scale(1.05); /* Hover effect */
+        }
+
+        .plan h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem; /* Responsive font size */
+        }
+
+        .plan p {
+            font-size: 1.25rem; /* Responsive font size */
+            margin-bottom: 1rem;
+        }
+
+        .plan ul {
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        .plan ul li {
+            margin: 0.5rem 0;
+        }
+
+        .btn {
+            background: #000000af;
+            color: #fff;
+            padding: 0.75rem 1.5rem; /* Responsive padding */
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            font-size: 1rem; /* Responsive font size */
+            transition: background 0.3s; /* Add transition for hover effect */
+        }
+
+        .btn:hover {
+            background: #444;
+            background-image: url("music1.jpg"); /* Button hover effect */
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            h1 {
+                float: none;
+                text-align: center;
+                margin-bottom: 1rem;
+                font-size: 2rem; /* Smaller font size */
+            }
+
+            nav {
+                float: none;
+                text-align: center;
+            }
+
+            nav ul {
+                padding: 0;
+            }
+
+            nav ul li {
+                display: block;
+                margin: 0.5rem 0;
+            }
+
+            .subscription-plans {
+                flex-direction: column; /* Stack plans vertically */
+                align-items: center; /* Center align plans */
+            }
+
+            .plan {
+                width: 90%; /* Make plans take up more width on smaller screens */
+                max-width: none; /* Remove max-width for smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .plan {
+                padding: 1rem; /* Smaller padding */
+            }
+
+            .btn {
+                padding: 0.5rem 1rem; /* Smaller button padding */
+                font-size: 0.9rem; /* Smaller font size */
+            }
+
+            .subscription h2 {
+                font-size: 1.8rem; /* Smaller font size */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>CustomBeats</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#albums">Albums</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="subscription">
+        <div class="container">
+            <h2>Choose Your Subscription Plan</h2>
+            <div class="subscription-plans">
+                <div class="plan">
+                    <h3>Basic Plan</h3>
+                    <p>$9.99/month</p>
+                    <ul>
+                        <li>Access to all songs</li>
+                        <li>Ad-supported</li>
+                    </ul>
+                    <a href="#" class="btn">Subscribe</a>
+                </div>
+                <div class="plan">
+                    <h3>Standard Plan</h3>
+                    <p>$14.99/month</p>
+                    <ul>
+                        <li>Access to all songs</li>
+                        <li>No ads</li>
+                        <li>Offline listening</li>
+                    </ul>
+                    <a href="#" class="btn">Subscribe</a>
+                </div>
+                <div class="plan">
+                    <h3>Premium Plan</h3>
+                    <p>$19.99/month</p>
+                    <ul>
+                        <li>Access to all songs</li>
+                        <li>No ads</li>
+                        <li>Offline listening</li>
+                        <li>Exclusive content</li>
+                    </ul>
+                    <a href="#" class="btn">Subscribe</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 CustomBeats. All rights reserved.</p>
+    </footer>
+</body>
+</html>
